@@ -1,0 +1,2 @@
+class RefImgsController < ApplicationController
+end

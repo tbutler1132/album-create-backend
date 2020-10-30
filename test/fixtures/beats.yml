@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bpm: 1.5
+  key_sig: MyString
+  selected: false
+  song_id: 1
+  user_id: 1
+
+two:
+  bpm: 1.5
+  key_sig: MyString
+  selected: false
+  song_id: 1
+  user_id: 1

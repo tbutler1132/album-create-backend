@@ -1,0 +1,2 @@
+class RefSongsController < ApplicationController
+end
