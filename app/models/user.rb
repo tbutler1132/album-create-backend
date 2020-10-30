@@ -1,7 +1,5 @@
 class User < ApplicationRecord
     has_many :albums
-    
-    has_many :polls
 
     has_many :beats
     has_many :masters

@@ -5,10 +5,4 @@ class Beat < ApplicationRecord
 
     has_many :vocals
 
-    has_many :wins
-    has_many :polls, through: :wins
-
-    has_many :losses
-    has_many :polls, through: :losses
-
 end

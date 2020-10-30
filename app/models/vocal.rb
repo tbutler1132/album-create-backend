@@ -3,7 +3,7 @@ class Vocal < ApplicationRecord
 
     belongs_to :beat
 
-    belongs_to :song
+    # belongs_to :song
 
     has_many :mixes
 end
