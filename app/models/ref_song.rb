@@ -4,4 +4,6 @@ class RefSong < ApplicationRecord
 
     belongs_to :song
 
+    has_many :results, as: :winnable
+
 end

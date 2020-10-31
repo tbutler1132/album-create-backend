@@ -6,4 +6,6 @@ class Vocal < ApplicationRecord
     # belongs_to :song
 
     has_many :mixes
+
+    has_many :results, as: :winnable
 end

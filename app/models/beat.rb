@@ -5,4 +5,6 @@ class Beat < ApplicationRecord
 
     has_many :vocals
 
+    has_many :results, as: :winnable
+
 end

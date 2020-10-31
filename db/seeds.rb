@@ -5,6 +5,8 @@ RefImg.destroy_all
 RefSong.destroy_all
 Beat.destroy_all
 Vocal.destroy_all
+Result.destroy_all
+Poll.destroy_all
 
 
 
@@ -45,6 +47,15 @@ song_7 = Song.create(title: "Track 7", placement: 7, phase: 1, album: album_1)
 
 ######
 
+poll_1_tim = Poll.create(phase: 2, user: user_tim)
 
+poll_2_tim = Poll.create(phase: 1, user: user_tim)
+
+ref_song_result_tim = Result.create(win: true, poll: poll_2_tim, winnable: RefSong, winnable: ref_song_1)
+
+
+beat_result_tim = Result.create(win: true, poll: poll_1_tim, winnable: Beat, winnable: beat_1)
+
+beat_result_tim = Result.create(win: false, poll: poll_1_tim, winnable: Beat, winnable: beat_2)
 
 
