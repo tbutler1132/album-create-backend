@@ -3,4 +3,5 @@ class BeatSerializer < ActiveModel::Serializer
 
   has_many :vocals
 
+  has_many :results, as: :winnable
 end

@@ -39,6 +39,8 @@ master_1 = Master.create(mix: mix_1, user: user_mike_dean, selected: true)
 master_2 = Master.create(mix: mix_1, user: user_kanye, selected: false)
 #
 song_2 = Song.create(title: "Track 2", placement: 2, phase: 1, album: album_1)
+
+
 song_3 = Song.create(title: "Track 3", placement: 3, phase: 1, album: album_1)
 song_4 = Song.create(title: "Track 4", placement: 4, phase: 1, album: album_1)
 song_5 = Song.create(title: "Track 5", placement: 5, phase: 1, album: album_1)
