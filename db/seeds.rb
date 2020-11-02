@@ -40,11 +40,16 @@ master_2 = Master.create(mix: mix_1, user: user_kanye, selected: false)
 #
 song_2 = Song.create(title: "Track 2", placement: 2, phase: 1, album: album_1)
 
+song_2_ref_img_1 = RefImg.create(title: "Kid Cudi", img_url: "https://static.hollywoodreporter.com/wp-content/uploads/2020/10/GettyImages-1210689746-H-2020-1603925642-928x523.jpg", song: song_2, user: user_kanye, selected: true)
+song_2_ref_img_2 = RefImg.create(title: "Kid Cudi 2", img_url: "https://static.billboard.com/files/2020/09/Kid-Cudi-jan-17-2020-a-billboard-1548-1601416648.jpg", song: song_2, user: user_tim, selected: false)
+song_2_ref_img_3 = RefImg.create(title: "Kid Cudi 3", img_url: "https://pyxis.nymag.com/v1/imgs/bcc/652/1fd748335749e3782b4c1eb8bf81e52a5b-19-kid-cudi.rsquare.w1200.jpg", song: song_2, user: user_mike_dean, selected: false)
+song_2_ref_img_4 = RefImg.create(title: "Kid Cudi 4", img_url: "https://img.washingtonpost.com/rf/image_1484w/WashingtonPost/Content/Blogs/therootdc/Images/World_Premiere_of_A_Haunted_House_064e4-681.jpg?uuid=V7vvqmCzEeKZQG_EiPP-zQ", song: song_2, user: user_mike_dean, selected: false)
 
-song_3 = Song.create(title: "Track 3", placement: 3, phase: 1, album: album_1)
-song_4 = Song.create(title: "Track 4", placement: 4, phase: 1, album: album_1)
-song_5 = Song.create(title: "Track 5", placement: 5, phase: 1, album: album_1)
-song_6 = Song.create(title: "Track 6", placement: 6, phase: 1, album: album_1)
+
+song_3 = Song.create(title: "Track 3", placement: 3, phase: 2, album: album_1)
+song_4 = Song.create(title: "Track 4", placement: 4, phase: 3, album: album_1)
+song_5 = Song.create(title: "Track 5", placement: 5, phase: 4, album: album_1)
+song_6 = Song.create(title: "Track 6", placement: 6, phase: 5, album: album_1)
 song_7 = Song.create(title: "Track 7", placement: 7, phase: 1, album: album_1)
 
 ######
@@ -58,6 +63,26 @@ ref_song_result_tim = Result.create(win: true, poll: poll_2_tim, winnable: RefSo
 
 beat_result_tim = Result.create(win: true, poll: poll_1_tim, winnable: Beat, winnable: beat_1)
 
-beat_result_tim = Result.create(win: false, poll: poll_1_tim, winnable: Beat, winnable: beat_2)
+beat_result_tim_2 = Result.create(win: false, poll: poll_1_tim, winnable: Beat, winnable: beat_2)
+
+song_2_poll_1_tim = Poll.create(phase: 1, user: user_tim)
+song_2_poll_2_tim = Poll.create(phase: 1, user: user_tim)
+song_2_poll_1_kanye = Poll.create(phase: 1, user: user_kanye)
+song_2_poll_2_kanye = Poll.create(phase: 1, user: user_kanye)
+song_2_poll_1_mike = Poll.create(phase: 1, user: user_mike_dean)
+song_2_poll_2_mike = Poll.create(phase: 1, user: user_mike_dean)
+
+ref_result_1_tim = Result.create(poll: song_2_poll_1_tim, win: true, winnable: RefImg, winnable: song_2_ref_img_1)
+ref_result_1_tim = Result.create(poll: song_2_poll_1_tim, win: false, winnable: RefImg, winnable: song_2_ref_img_2)
+
+ref_result_2_tim = Result.create(poll: song_2_poll_2_tim, win: true, winnable: RefImg, winnable: song_2_ref_img_1)
+ref_result_2_tim = Result.create(poll: song_2_poll_2_tim, win: false, winnable: RefImg, winnable: song_2_ref_img_3)
+
+ref_result_1_kanye = Result.create(poll: song_2_poll_1_kanye, win: true, winnable: RefImg, winnable: song_2_ref_img_3)
+ref_result_1_kanye = Result.create(poll: song_2_poll_1_kanye, win: false, winnable: RefImg, winnable: song_2_ref_img_1)
+
+ref_result_1_mike = Result.create(poll: song_2_poll_1_mike, win: true, winnable: RefImg, winnable: song_2_ref_img_2)
+ref_result_1_mike = Result.create(poll: song_2_poll_1_mike, win: false, winnable: RefImg, winnable: song_2_ref_img_3)
+
 
 
