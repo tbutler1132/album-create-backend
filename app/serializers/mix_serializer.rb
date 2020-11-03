@@ -4,4 +4,8 @@ class MixSerializer < ActiveModel::Serializer
   belongs_to :vocal
 
   has_many :results, as: :winnable
+
+  # def song
+  #   { :song => object.vocal }
+  # end
 end

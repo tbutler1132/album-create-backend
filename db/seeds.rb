@@ -105,8 +105,8 @@ song_6_vocal_2 = Vocal.create(beat: song_6_beat_1, user: user_mike_dean, selecte
 song_6_mix_1 = Mix.create(vocal: song_6_vocal_1, user: user_mike_dean, selected: true)
 song_6_mix_2 = Mix.create(vocal: song_6_vocal_2, user: user_kanye, selected: false)
 
-song_6_master_1 = Master.create(mix: mix_1, user: user_mike_dean, selected: false)
-song_6_master_2 = Master.create(mix: mix_1, user: user_kanye, selected: false)
+song_6_master_1 = Master.create(mix: song_6_mix_1, user: user_mike_dean, selected: false)
+song_6_master_2 = Master.create(mix: song_6_mix_1, user: user_kanye, selected: false)
 
 
 
