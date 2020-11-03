@@ -19,12 +19,11 @@ class BeatsController < ApplicationController
         else
           render json: {error: beat.errors.full_messages}, status: :not_acceptable
         end
-    
     end
 
     private
 
     def beat_params
-        params.require(:beat).permit(:bpm, :key_sig, :user_id, :song_id)
+        params.require(:beat).permit(:bpm, :key_sig, :selected, :user_id, :song_id)
     end
 end

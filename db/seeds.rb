@@ -38,7 +38,7 @@ mix_2 = Mix.create(vocal: vocal_2, user: user_kanye, selected: false)
 master_1 = Master.create(mix: mix_1, user: user_mike_dean, selected: true)
 master_2 = Master.create(mix: mix_1, user: user_kanye, selected: false)
 #
-song_2 = Song.create(title: "Track 2", placement: 2, phase: 1, album: album_1)
+song_2 = Song.create(title: "Track 2", placement: 2, phase: 2, album: album_1)
 
 song_2_ref_img_1 = RefImg.create(title: "Kid Cudi", img_url: "https://static.hollywoodreporter.com/wp-content/uploads/2020/10/GettyImages-1210689746-H-2020-1603925642-928x523.jpg", song: song_2, user: user_kanye, selected: true)
 song_2_ref_img_2 = RefImg.create(title: "Kid Cudi 2", img_url: "https://static.billboard.com/files/2020/09/Kid-Cudi-jan-17-2020-a-billboard-1548-1601416648.jpg", song: song_2, user: user_tim, selected: false)
@@ -46,7 +46,7 @@ song_2_ref_img_3 = RefImg.create(title: "Kid Cudi 3", img_url: "https://pyxis.ny
 song_2_ref_img_4 = RefImg.create(title: "Kid Cudi 4", img_url: "https://img.washingtonpost.com/rf/image_1484w/WashingtonPost/Content/Blogs/therootdc/Images/World_Premiere_of_A_Haunted_House_064e4-681.jpg?uuid=V7vvqmCzEeKZQG_EiPP-zQ", song: song_2, user: user_mike_dean, selected: false)
 
 
-song_3 = Song.create(title: "Track 3", placement: 3, phase: 2, album: album_1)
+song_3 = Song.create(title: "Track 3", placement: 3, phase: 1, album: album_1)
 song_4 = Song.create(title: "Track 4", placement: 4, phase: 3, album: album_1)
 song_5 = Song.create(title: "Track 5", placement: 5, phase: 4, album: album_1)
 song_6 = Song.create(title: "Track 6", placement: 6, phase: 5, album: album_1)
