@@ -1,10 +1,10 @@
 class MasterSerializer < ActiveModel::Serializer
-  attributes :id, :selected, :song
+  attributes :id, :selected, :mix, :beat
 
   belongs_to :mix
 
-  def song
-    { :song => object.mix }
+  def beat
+    { :beat => object.mix.vocal.beat }
   end 
 
 end

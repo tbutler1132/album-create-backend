@@ -12,7 +12,6 @@ class PollsController < ApplicationController
     end
 
     def create
-        # byebug
         poll = Poll.new(poll_params)
     
         if poll.save

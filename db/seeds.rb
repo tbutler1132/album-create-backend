@@ -7,6 +7,8 @@ Beat.destroy_all
 Vocal.destroy_all
 Result.destroy_all
 Poll.destroy_all
+Mix.destroy_all
+Master.destroy_all
 
 
 
