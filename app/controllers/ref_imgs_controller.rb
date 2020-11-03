@@ -15,6 +15,14 @@ class RefImgsController < ApplicationController
         end
     end
 
+    def update
+      ref_img = RefImg.find(params[:id])
+  
+      ref_img.update!(beat_params)
+  
+      render json: ref_img
+  end
+
     private
 
     def ref_img_params

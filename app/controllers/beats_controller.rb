@@ -21,6 +21,14 @@ class BeatsController < ApplicationController
         end
     end
 
+    def update
+        beat = Beat.find(params[:id])
+    
+        beat.update!(beat_params)
+    
+        render json: beat
+    end
+
     private
 
     def beat_params
