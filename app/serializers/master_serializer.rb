@@ -3,6 +3,8 @@ class MasterSerializer < ActiveModel::Serializer
 
   belongs_to :mix
 
+  has_many :results, as: :winnable
+
   def beat
     { :beat => object.mix.vocal.beat }
   end 

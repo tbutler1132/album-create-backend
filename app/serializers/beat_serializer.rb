@@ -1,5 +1,5 @@
 class BeatSerializer < ActiveModel::Serializer
-  attributes :id, :bpm, :key_sig, :selected, :song
+  attributes :id, :bpm, :key_sig, :selected, :audio, :song
 
   has_many :vocals
 

@@ -23,13 +23,13 @@ album_1 = Album.create(title: "Project 1", user: user_tim, genre: "hip-hop")
 ########
 song_1 = Song.create(title: "Track 1", placement: 1, phase: 6, album: album_1)
 
-ref_img_1 = RefImg.create(title: "Kanye", img_url: "https://storage.googleapis.com/afs-prod/media/c7ee6099a9044f57b6502c4b2a6105d7/2763.jpeg", song: song_1, user: user_kanye, selected: true)
+ref_img_1 = RefImg.create(title: "Winter", img_url: "https://freestock.ca/sapphire_forest__hdr_sjpg877.jpg", song: song_1, user: user_kanye, selected: true)
 
 ref_song_1 = RefSong.create(title: "Stronger", song_url: "https://www.youtube.com/watch?v=PsO6ZnUZI0g&ab_channel=KanyeWestVEVO", song: song_1, user: user_kanye, selected: true)
 
-beat_1 = Beat.create(bpm: 145, key_sig: "A minor", selected: true, song: song_1, user: user_kanye)
-beat_2 = Beat.create(bpm: 100, key_sig: "B major", selected: false, song: song_1, user: user_mike_dean)
-beat_3 = Beat.create(bpm: 80, key_sig: "D minor", selected: false, song: song_1, user: user_tim)
+beat_1 = Beat.create(bpm: 145, key_sig: "A minor", selected: true, song: song_1, user: user_kanye, audio:'../app/audio/rockstar.mp3')
+beat_2 = Beat.create(bpm: 100, key_sig: "B major", selected: false, song: song_1, user: user_mike_dean, audio:'../app/audio/rockstar.mp3')
+beat_3 = Beat.create(bpm: 80, key_sig: "D minor", selected: false, song: song_1, user: user_tim, audio:'../app/audio/rockstar.mp3')
 
 vocal_1 = Vocal.create(beat: beat_1, user: user_kanye, selected: false)
 vocal_2 = Vocal.create(beat: beat_1, user: user_mike_dean, selected: true)
@@ -54,65 +54,77 @@ song_2_beat_3 = Beat.create(bpm: 189, key_sig: "D major", selected: false, song:
 
 song_3 = Song.create(title: "Track 3", placement: 3, phase: 1, album: album_1)
 
-song_3_ref_img_1 = RefImg.create(title: "Eminem", img_url: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Eminem_-_Concert_for_Valor_in_Washington%2C_D.C._Nov._11%2C_2014_%282%29_%28Cropped%29.jpg", song: song_3, user: user_kanye, selected: false)
+song_3_ref_img_1 = RefImg.create(title: "Eminem", img_url: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Eminem_-_Concert_for_Valor_in_Washington%2C_D.C._Nov._11%2C_2014_%282%29_%28Cropped%29.jpg", song: song_3, user: user_kanye, selected: true)
 song_3_ref_img_2 = RefImg.create(title: "Marshall", img_url: "https://static.billboard.com/files/2020/11/Eminem-feb-2020-a-billboard-1548-1604341302-compressed.jpg", song: song_3, user: user_tim, selected: false)
 song_3_ref_img_3 = RefImg.create(title: "Slim Shady", img_url: "https://factmag-images.s3.amazonaws.com/wp-content/uploads/2015/04/Eminem021214-635x372.jpg", song: song_3, user: user_kanye, selected: false)
 
+beat_1_song_3 = Beat.create(bpm: 145, key_sig: "F minor", selected: true, song: song_3, user: user_kanye, audio:'../app/audio/rockstar.mp3')
+beat_2_song_3 = Beat.create(bpm: 300, key_sig: "B# major", selected: false, song: song_3, user: user_mike_dean, audio:'../app/audio/rockstar.mp3')
+beat_3_song_3 = Beat.create(bpm: 80, key_sig: "D major", selected: false, song: song_3, user: user_tim, audio:'../app/audio/rockstar.mp3')
 
-#
+vocal_1_song_3 = Vocal.create(beat: beat_1_song_3, user: user_kanye, selected: false)
+vocal_2_song_3 = Vocal.create(beat: beat_1_song_3, user: user_mike_dean, selected: true)
+
+mix_1_song_3 = Mix.create(vocal: vocal_2_song_3, user: user_mike_dean, selected: true)
+mix_2_song_3 = Mix.create(vocal: vocal_2_song_3, user: user_kanye, selected: false)
+
+master_1_song_3 = Master.create(mix: mix_1_song_3, user: user_mike_dean, selected: true)
+master_2_song_3 = Master.create(mix: mix_1_song_3, user: user_kanye, selected: false)
+
+# #
 song_4 = Song.create(title: "Track 4", placement: 4, phase: 3, album: album_1)
 
-song_4_ref_img_1 = RefImg.create(title: "Eminem", img_url: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Eminem_-_Concert_for_Valor_in_Washington%2C_D.C._Nov._11%2C_2014_%282%29_%28Cropped%29.jpg", song: song_4, user: user_kanye, selected: true)
-song_4_ref_img_2 = RefImg.create(title: "Marshall", img_url: "https://static.billboard.com/files/2020/11/Eminem-feb-2020-a-billboard-1548-1604341302-compressed.jpg", song: song_4, user: user_tim, selected: false)
-song_4_ref_img_3 = RefImg.create(title: "Slim Shady", img_url: "https://factmag-images.s3.amazonaws.com/wp-content/uploads/2015/04/Eminem021214-635x372.jpg", song: song_4, user: user_kanye, selected: false)
+# song_4_ref_img_1 = RefImg.create(title: "Eminem", img_url: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Eminem_-_Concert_for_Valor_in_Washington%2C_D.C._Nov._11%2C_2014_%282%29_%28Cropped%29.jpg", song: song_4, user: user_kanye, selected: true)
+# song_4_ref_img_2 = RefImg.create(title: "Marshall", img_url: "https://static.billboard.com/files/2020/11/Eminem-feb-2020-a-billboard-1548-1604341302-compressed.jpg", song: song_4, user: user_tim, selected: false)
+# song_4_ref_img_3 = RefImg.create(title: "Slim Shady", img_url: "https://factmag-images.s3.amazonaws.com/wp-content/uploads/2015/04/Eminem021214-635x372.jpg", song: song_4, user: user_kanye, selected: false)
 
-song_4_beat_1 = Beat.create(bpm: 145, key_sig: "C minor", selected: true, song: song_4, user: user_tim)
-song_4_beat_2 = Beat.create(bpm: 70, key_sig: "F major", selected: false, song: song_4, user: user_kanye)
-song_4_beat_3 = Beat.create(bpm: 100, key_sig: "D major", selected: false, song: song_4, user: user_mike_dean)
+# song_4_beat_1 = Beat.create(bpm: 145, key_sig: "C minor", selected: true, song: song_4, user: user_tim)
+# song_4_beat_2 = Beat.create(bpm: 70, key_sig: "F major", selected: false, song: song_4, user: user_kanye)
+# song_4_beat_3 = Beat.create(bpm: 100, key_sig: "D major", selected: false, song: song_4, user: user_mike_dean)
 
-song_4_vocal_1 = Vocal.create(beat: song_4_beat_1, user: user_kanye, selected: false)
-song_4_vocal_2 = Vocal.create(beat: song_4_beat_1, user: user_mike_dean, selected: false)
+# song_4_vocal_1 = Vocal.create(beat: song_4_beat_1, user: user_kanye, selected: false)
+# song_4_vocal_2 = Vocal.create(beat: song_4_beat_1, user: user_mike_dean, selected: false)
 
-#
+# #
 song_5 = Song.create(title: "Track 5", placement: 5, phase: 4, album: album_1)
 
-song_5_ref_img_1 = RefImg.create(title: "Nas", img_url: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Eminem_-_Concert_for_Valor_in_Washington%2C_D.C._Nov._11%2C_2014_%282%29_%28Cropped%29.jpg", song: song_4, user: user_kanye, selected: true)
-song_5_ref_img_2 = RefImg.create(title: "Nasty Nas", img_url: "https://static.billboard.com/files/2020/11/Eminem-feb-2020-a-billboard-1548-1604341302-compressed.jpg", song: song_4, user: user_tim, selected: false)
-song_5_ref_img_3 = RefImg.create(title: "N", img_url: "https://factmag-images.s3.amazonaws.com/wp-content/uploads/2015/04/Eminem021214-635x372.jpg", song: song_4, user: user_kanye, selected: false)
+# song_5_ref_img_1 = RefImg.create(title: "Nas", img_url: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Eminem_-_Concert_for_Valor_in_Washington%2C_D.C._Nov._11%2C_2014_%282%29_%28Cropped%29.jpg", song: song_4, user: user_kanye, selected: true)
+# song_5_ref_img_2 = RefImg.create(title: "Nasty Nas", img_url: "https://static.billboard.com/files/2020/11/Eminem-feb-2020-a-billboard-1548-1604341302-compressed.jpg", song: song_4, user: user_tim, selected: false)
+# song_5_ref_img_3 = RefImg.create(title: "N", img_url: "https://factmag-images.s3.amazonaws.com/wp-content/uploads/2015/04/Eminem021214-635x372.jpg", song: song_4, user: user_kanye, selected: false)
 
-song_5_beat_1 = Beat.create(bpm: 100, key_sig: "C major", selected: true, song: song_5, user: user_tim)
-song_5_beat_2 = Beat.create(bpm: 73, key_sig: "F minor", selected: false, song: song_5, user: user_kanye)
-song_5_beat_3 = Beat.create(bpm: 120, key_sig: "A major", selected: false, song: song_5, user: user_mike_dean)
+# song_5_beat_1 = Beat.create(bpm: 100, key_sig: "C major", selected: true, song: song_5, user: user_tim)
+# song_5_beat_2 = Beat.create(bpm: 73, key_sig: "F minor", selected: false, song: song_5, user: user_kanye)
+# song_5_beat_3 = Beat.create(bpm: 120, key_sig: "A major", selected: false, song: song_5, user: user_mike_dean)
 
-song_5_vocal_1 = Vocal.create(beat: song_5_beat_1, user: user_kanye, selected: true)
-song_5_vocal_2 = Vocal.create(beat: song_5_beat_1, user: user_mike_dean, selected: false)
+# song_5_vocal_1 = Vocal.create(beat: song_5_beat_1, user: user_kanye, selected: true)
+# song_5_vocal_2 = Vocal.create(beat: song_5_beat_1, user: user_mike_dean, selected: false)
 
-song_5_mix_1 = Mix.create(vocal: song_5_vocal_1, user: user_mike_dean, selected: false)
-song_5_mix_2 = Mix.create(vocal: song_5_vocal_2, user: user_kanye, selected: false)
+# song_5_mix_1 = Mix.create(vocal: song_5_vocal_1, user: user_mike_dean, selected: false)
+# song_5_mix_2 = Mix.create(vocal: song_5_vocal_2, user: user_kanye, selected: false)
 
-#
+# #
 song_6 = Song.create(title: "Track 6", placement: 6, phase: 5, album: album_1)
 
-song_6_ref_img_1 = RefImg.create(title: "Wale", img_url: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Eminem_-_Concert_for_Valor_in_Washington%2C_D.C._Nov._11%2C_2014_%282%29_%28Cropped%29.jpg", song: song_6, user: user_kanye, selected: true)
-song_6_ref_img_2 = RefImg.create(title: "Dolphin", img_url: "https://static.billboard.com/files/2020/11/Eminem-feb-2020-a-billboard-1548-1604341302-compressed.jpg", song: song_6, user: user_tim, selected: false)
-song_6_ref_img_3 = RefImg.create(title: "Fish", img_url: "https://factmag-images.s3.amazonaws.com/wp-content/uploads/2015/04/Eminem021214-635x372.jpg", song: song_6, user: user_kanye, selected: false)
+# song_6_ref_img_1 = RefImg.create(title: "Wale", img_url: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Eminem_-_Concert_for_Valor_in_Washington%2C_D.C._Nov._11%2C_2014_%282%29_%28Cropped%29.jpg", song: song_6, user: user_kanye, selected: true)
+# song_6_ref_img_2 = RefImg.create(title: "Dolphin", img_url: "https://static.billboard.com/files/2020/11/Eminem-feb-2020-a-billboard-1548-1604341302-compressed.jpg", song: song_6, user: user_tim, selected: false)
+# song_6_ref_img_3 = RefImg.create(title: "Fish", img_url: "https://factmag-images.s3.amazonaws.com/wp-content/uploads/2015/04/Eminem021214-635x372.jpg", song: song_6, user: user_kanye, selected: false)
 
-song_6_beat_1 = Beat.create(bpm: 98, key_sig: "A major", selected: true, song: song_6, user: user_tim)
-song_6_beat_2 = Beat.create(bpm: 79, key_sig: "A minor", selected: false, song: song_6, user: user_kanye)
-song_6_beat_3 = Beat.create(bpm: 127, key_sig: "D major", selected: false, song: song_6, user: user_mike_dean)
+# song_6_beat_1 = Beat.create(bpm: 98, key_sig: "A major", selected: true, song: song_6, user: user_tim)
+# song_6_beat_2 = Beat.create(bpm: 79, key_sig: "A minor", selected: false, song: song_6, user: user_kanye)
+# song_6_beat_3 = Beat.create(bpm: 127, key_sig: "D major", selected: false, song: song_6, user: user_mike_dean)
 
-song_6_vocal_1 = Vocal.create(beat: song_6_beat_1, user: user_kanye, selected: true)
-song_6_vocal_2 = Vocal.create(beat: song_6_beat_1, user: user_mike_dean, selected: false)
+# song_6_vocal_1 = Vocal.create(beat: song_6_beat_1, user: user_kanye, selected: true)
+# song_6_vocal_2 = Vocal.create(beat: song_6_beat_1, user: user_mike_dean, selected: false)
 
-song_6_mix_1 = Mix.create(vocal: song_6_vocal_1, user: user_mike_dean, selected: true)
-song_6_mix_2 = Mix.create(vocal: song_6_vocal_2, user: user_kanye, selected: false)
+# song_6_mix_1 = Mix.create(vocal: song_6_vocal_1, user: user_mike_dean, selected: true)
+# song_6_mix_2 = Mix.create(vocal: song_6_vocal_2, user: user_kanye, selected: false)
 
-song_6_master_1 = Master.create(mix: song_6_mix_1, user: user_mike_dean, selected: false)
-song_6_master_2 = Master.create(mix: song_6_mix_1, user: user_kanye, selected: false)
+# song_6_master_1 = Master.create(mix: song_6_mix_1, user: user_mike_dean, selected: false)
+# song_6_master_2 = Master.create(mix: song_6_mix_1, user: user_kanye, selected: false)
 
 
 
-#
+# #
 song_7 = Song.create(title: "Track 7", placement: 7, phase: 1, album: album_1)
 
 ######
