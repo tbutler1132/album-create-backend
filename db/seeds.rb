@@ -139,7 +139,7 @@ poll_1_tim = Poll.create(phase: 2, user: user_tim)
 
 poll_2_tim = Poll.create(phase: 1, user: user_tim)
 
-ref_song_result_tim = Result.create(win: true, poll: poll_2_tim, winnable: RefSong, winnable: ref_song_1)
+# ref_song_result_tim = Result.create(win: true, poll: poll_2_tim, winnable: RefSong, winnable: ref_song_1)
 
 
 beat_result_tim = Result.create(win: true, poll: poll_1_tim, winnable: Beat, winnable: beat_1)
