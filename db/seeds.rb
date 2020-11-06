@@ -54,7 +54,7 @@ song_2_beat_3 = Beat.create(bpm: 189, key_sig: "D major", selected: false, song:
 
 song_3 = Song.create(title: "Track 3", placement: 3, phase: 1, album: album_1)
 
-song_3_ref_img_1 = RefImg.create(title: "Ocean", img_url: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/abstract-art-flaming-ocean-kathy-symonds.jpg", song: song_3, user: user_kanye, selected: true)
+song_3_ref_img_1 = RefImg.create(title: "Ocean", img_url: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/abstract-art-flaming-ocean-kathy-symonds.jpg", song: song_3, user: user_kanye, selected: false)
 song_3_ref_img_2 = RefImg.create(title: "Water", img_url: "https://www.trollart.com/wp-content/uploads/store-img/P/PlanetOcean.jpg", song: song_3, user: user_tim, selected: false)
 song_3_ref_img_3 = RefImg.create(title: "Fish", img_url: "https://i.pinimg.com/originals/b4/d0/87/b4d08752f0bd87658db860905261fd89.jpg", song: song_3, user: user_kanye, selected: false)
 song_3_ref_img_4 = RefImg.create(title: "more", img_url: "https://img5.goodfon.com/wallpaper/nbig/2/48/sea-waves-water-sky-orange-sky-artwork-digital-art-art.jpg", song: song_3, user: user_tim, selected: false)
@@ -69,12 +69,12 @@ beat_2_song_3 = Beat.create(bpm: 300, key_sig: "B# major", selected: false, song
 beat_3_song_3 = Beat.create(bpm: 80, key_sig: "D major", selected: false, song: song_3, user: user_tim, audio:'../app/audio/rockstar.mp3')
 
 vocal_1_song_3 = Vocal.create(beat: beat_1_song_3, user: user_kanye, selected: false)
-vocal_2_song_3 = Vocal.create(beat: beat_1_song_3, user: user_mike_dean, selected: true)
+vocal_2_song_3 = Vocal.create(beat: beat_1_song_3, user: user_mike_dean, selected: false)
 
-mix_1_song_3 = Mix.create(vocal: vocal_2_song_3, user: user_mike_dean, selected: true)
+mix_1_song_3 = Mix.create(vocal: vocal_2_song_3, user: user_mike_dean, selected: false)
 mix_2_song_3 = Mix.create(vocal: vocal_2_song_3, user: user_kanye, selected: false)
 
-master_1_song_3 = Master.create(mix: mix_1_song_3, user: user_mike_dean, selected: true)
+master_1_song_3 = Master.create(mix: mix_1_song_3, user: user_mike_dean, selected: false)
 master_2_song_3 = Master.create(mix: mix_1_song_3, user: user_kanye, selected: false)
 
 # #
