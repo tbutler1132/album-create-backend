@@ -10,4 +10,29 @@ class VocalsController < ApplicationController
     
         render json: vocal
     end
+
+    def create
+        vocal = Vocal.new(vocal_params)
+    
+        if vocal.save
+          render json: vocal
+        else
+          render json: {error: vocal.errors.full_messages}, status: :not_acceptable
+        end
+    end
+
+    def update
+        vocal = Vocal.find(params[:id])
+    
+        vocal.update!(vocal_params)
+    
+        render json: vocal
+    end
+
+    private
+
+    def vocal_params
+        params.require(:vocal).permit(:selected, :user_id, :beat_id)
+    end
+
 end
