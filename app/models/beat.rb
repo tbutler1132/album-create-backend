@@ -7,4 +7,6 @@ class Beat < ApplicationRecord
 
     has_many :results, as: :winnable
 
+    has_one_attached :audio_data
+
 end
