@@ -25,13 +25,14 @@ class MixesController < ApplicationController
         mix = Mix.find(params[:id])
     
         mix.update!(mix_params)
+        audio_data_url = rails_blob_path(beat.audio_data)
     
-        render json: mix
+        render json: {mix: mix, audio_data_url: audio_data_url}
     end
 
     private
 
     def mix_params
-        params.require(:mix).permit(:selected, :user_id, :vocal_id)
+        params.require(:mix).permit(:selected, :user_id, :vocal_id, :audio_data)
     end
 end

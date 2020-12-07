@@ -8,4 +8,6 @@ class Mix < ApplicationRecord
     has_many :masters
 
     has_many :results, as: :winnable
+
+    has_one_attached :audio_data
 end

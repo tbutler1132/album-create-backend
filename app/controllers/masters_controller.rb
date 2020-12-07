@@ -25,13 +25,14 @@ class MastersController < ApplicationController
         master = Master.find(params[:id])
     
         master.update!(master_params)
+        audio_data_url = rails_blob_path(beat.audio_data)
     
-        render json: master
+        render json: {master: master, audio_data_url: audio_data_url}
     end
 
     private
 
     def master_params
-        params.require(:master).permit(:selected, :user_id, :mix_id)
+        params.require(:master).permit(:selected, :user_id, :mix_id, :audio_data)
     end
 end

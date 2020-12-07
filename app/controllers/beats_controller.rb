@@ -25,8 +25,9 @@ class BeatsController < ApplicationController
         beat = Beat.find(params[:id])
     
         beat.update!(beat_params)
-    
-        render json: beat
+        audio_data_url = rails_blob_path(beat.audio_data)
+
+        render json: {beat: beat, audio_data_url: audio_data_url}
     end
 
     private

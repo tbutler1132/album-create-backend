@@ -25,14 +25,15 @@ class VocalsController < ApplicationController
         vocal = Vocal.find(params[:id])
     
         vocal.update!(vocal_params)
+        audio_data_url = rails_blob_path(vocal.audio_data)
     
-        render json: vocal
+        render json: {vocal: vocal, audio_data_url: audio_data_url}
     end
 
     private
 
     def vocal_params
-        params.require(:vocal).permit(:selected, :user_id, :beat_id)
+        params.require(:vocal).permit(:selected, :user_id, :beat_id, :audio_data)
     end
 
 end
