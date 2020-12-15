@@ -12,7 +12,7 @@ Poll.destroy_all
 Mix.destroy_all
 Master.destroy_all
 
-user_tim = User.create(name: "Tim", username: "swizzed")
+user_tim = User.create(name: "Tim", username: "swizzed", password: "1234")
 user_kanye = User.create(name: "Kanye", username: "ye")  
 
 album_1 = Album.create(title: "Project 1", user: user_tim, genre: "hip-hop")
