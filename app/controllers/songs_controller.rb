@@ -1,7 +1,10 @@
 class SongsController < ApplicationController
+    skip_before_action :authorized, only: [:index, :show]
+
+
     def index
         songs = Song.all
-
+        
         render json: songs, except: [:updated_at, :created_at]
     end
 
