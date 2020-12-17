@@ -1,4 +1,6 @@
 class ResultsController < ApplicationController
+    skip_before_action :authorized, only: [:index, :show, :create]
+
     def index
         results = Result.all
         

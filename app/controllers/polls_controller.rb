@@ -1,4 +1,6 @@
 class PollsController < ApplicationController
+    skip_before_action :authorized, only: [:index, :show, :create]
+    
     def index
         polls = Poll.all
         
