@@ -17,7 +17,7 @@ user_kanye = User.create(name: "Kanye", username: "ye", password: "1234")
 
 album_1 = Album.create(title: "Project 1", user: user_tim, genre: "hip-hop")
 
-song_1 = Song.create(title: "Track 1", placement: 1, phase: 6, album: album_1)
+song_1 = Song.create(title: "Track 1", placement: 1, phase: 6, album: album_1, description: "The ordinary world. A simple song that hints at the adventure that is to come.")
 
 
 
@@ -78,9 +78,9 @@ ref_song_1 = RefSong.create(title: "Stronger", song_url: "https://www.youtube.co
 
 
 
-song_2 = Song.create(title: "Track 2", placement: 2, phase: 1, album: album_1)
+song_2 = Song.create(title: "Track 2", placement: 2, phase: 1, album: album_1, description: "The call to adventure. The protaganist it met with a cirumstance that requires him to make a decision. Will he take a leap off faith, or will he continue living the same life?")
 
-song_3 = Song.create(title: "Track 3", placement: 3, phase: 3, album: album_1)
+song_3 = Song.create(title: "Track 3", placement: 3, phase: 3, album: album_1, description: "Meeting the mentor. As the hero embarks on his journey he is not alone.")
 
 
 

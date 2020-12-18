@@ -1,5 +1,5 @@
 class SongSerializer < ActiveModel::Serializer
-  attributes :id, :title, :placement, :phase
+  attributes :id, :title, :placement, :phase, :description
 
   # def beats
   #   object.beats.collect do |beat|
