@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :comments
+  resources :comment_threads
   resources :results
   resources :albums
   resources :losses

@@ -6,4 +6,7 @@ class UserSerializer < ActiveModel::Serializer
   has_many :vocals
   has_many :mixes
   has_many :masters
+  has_many :ref_imgs
+
+  has_many :polls
 end

@@ -11,25 +11,39 @@ Result.destroy_all
 Poll.destroy_all
 Mix.destroy_all
 Master.destroy_all
+CommentThread.destroy_all
+Comment.destroy_all
 
 user_tim = User.create(name: "Tim", username: "swizzed", password: "1234")
 user_kanye = User.create(name: "Kanye", username: "ye", password: "1234")  
 
 album_1 = Album.create(title: "Project 1", user: user_tim, genre: "hip-hop")
 
-song_1 = Song.create(title: "Track 1", placement: 1, phase: 6, album: album_1, description: "The ordinary world. A simple song that hints at the adventure that is to come.")
+song_1 = Song.create(title: "Track 1", placement: 1, phase: 1, album: album_1, description: "The ordinary world. A simple song that hints at the adventure that is to come.")
 
 
 
 
-ref_img_1 = RefImg.create(title: "Kanye", img_url: "https://esdevlin.com/files/kanye-west/_largeImage/EDN_KANYE_GLOW_08A_170915_160256.jpg", song: song_1, user: user_tim, selected: false)
+ref_img_1 = RefImg.create(title: "Kanye", img_url: "https://esdevlin.com/files/kanye-west/_largeImage/EDN_KANYE_GLOW_08A_170915_160256.jpg", song: song_1, user: user_tim, selected: true)
 ref_img_2 = RefImg.create(title: "Kanye_CD", img_url: "https://www.nme.com/wp-content/uploads/2019/02/Kanye.jpg", song: song_1, user: user_tim, selected: false)
 ref_img_3 = RefImg.create(title: "Kanye_LR", img_url: "https://cdn.vox-cdn.com/thumbor/EW6bJfGP2d0w3qPzZOZHI0evFuk=/98x0:2901x2102/1200x800/filters:focal(98x0:2901x2102)/cdn.vox-cdn.com/uploads/chorus_image/image/55904439/1_p1AJzhVp6pqpMEdo7vSzag.0.jpeg", song: song_1, user: user_tim, selected: false)
 ref_img_4 = RefImg.create(title: "Kanye_808", img_url: "https://uproxx.com/wp-content/uploads/2018/11/808-heartbreaks-grid-uproxx.jpg", song: song_1, user: user_tim, selected: false)
 ref_img_5 = RefImg.create(title: "Kanye_MBDTF", img_url: "https://media.gq.com/photos/564f92c8dc7b324869a6ec18/master/pass/GettyImages-104037857.jpg", song: song_1, user: user_tim, selected: false)
 ref_img_6 = RefImg.create(title: "Kanye_Yeezus", img_url: "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-13565-kanye-1800-1385144890.jpg", song: song_1, user: user_tim, selected: false)
 
+beat_1 = Beat.create(bpm: 145, key_sig: "A minor", selected: true, song: song_1, user: user_kanye)
+beat_2 = Beat.create(bpm: 100, key_sig: "B major", selected: false, song: song_1, user: user_tim)
+beat_3 = Beat.create(bpm: 80, key_sig: "D minor", selected: false, song: song_1, user: user_tim)
+beat_4 = Beat.create(bpm: 70, key_sig: "B# minor", selected: false, song: song_1, user: user_tim)
+beat_5 = Beat.create(bpm: 92, key_sig: "D flat minor", selected: false, song: song_1, user: user_tim)
+beat_6 = Beat.create(bpm: 83, key_sig: "D major", selected: false, song: song_1, user: user_tim)
 
+vocal_1 = Vocal.create(beat: beat_1, user: user_kanye, selected: false)
+vocal_2 = Vocal.create(beat: beat_1, user: user_tim, selected: false)
+vocal_3 = Vocal.create(beat: beat_1, user: user_kanye, selected: false)
+vocal_4 = Vocal.create(beat: beat_1, user: user_tim, selected: false)
+vocal_5 = Vocal.create(beat: beat_1, user: user_kanye, selected: false)
+vocal_6 = Vocal.create(beat: beat_1, user: user_tim, selected: false)
 
 poll_1_1 = Poll.create(phase: 1, user: user_tim)
 poll_2_1 = Poll.create(phase: 1, user: user_tim)
@@ -69,7 +83,10 @@ img_5_win_1 = Result.create(poll: poll_15_5, win: true, winnable: RefImg, winnab
 
 
 
+comment_thread_1 = CommentThread.create(song: song_1, title: "Phase 1 Song 1 thread", phase: 1)
 
+comment_1 = Comment.create(user: user_tim, comment_thread: comment_thread_1, content: "I'm a comment, yay!")
+comment_2 = Comment.create(user: user_tim, comment_thread: comment_thread_1, content: "I be nappin")
 
 
 ref_song_1 = RefSong.create(title: "Stronger", song_url: "https://www.youtube.com/watch?v=PsO6ZnUZI0g&ab_channel=KanyeWestVEVO", song: song_1, user: user_tim, selected: false)

@@ -9,6 +9,7 @@ class SongSerializer < ActiveModel::Serializer
   
   belongs_to :album
   has_many :beats
+  has_many :comment_threads
 
   has_many :vocals
   has_many :mixes

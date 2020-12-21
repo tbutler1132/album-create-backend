@@ -1,4 +1,6 @@
 class VocalsController < ApplicationController
+    skip_before_action :authorized, only: [:index, :show, :create]
+    
     def index
         vocals = Vocal.all
         
