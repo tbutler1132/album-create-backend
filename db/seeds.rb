@@ -24,26 +24,21 @@ song_1 = Song.create(title: "Track 1", placement: 1, phase: 1, album: album_1, d
 
 
 
-ref_img_1 = RefImg.create(title: "Kanye", img_url: "https://esdevlin.com/files/kanye-west/_largeImage/EDN_KANYE_GLOW_08A_170915_160256.jpg", song: song_1, user: user_tim, selected: true)
+ref_img_1 = RefImg.create(title: "Kanye", img_url: "https://esdevlin.com/files/kanye-west/_largeImage/EDN_KANYE_GLOW_08A_170915_160256.jpg", song: song_1, user: user_tim, selected: false)
 ref_img_2 = RefImg.create(title: "Kanye_CD", img_url: "https://www.nme.com/wp-content/uploads/2019/02/Kanye.jpg", song: song_1, user: user_tim, selected: false)
 ref_img_3 = RefImg.create(title: "Kanye_LR", img_url: "https://cdn.vox-cdn.com/thumbor/EW6bJfGP2d0w3qPzZOZHI0evFuk=/98x0:2901x2102/1200x800/filters:focal(98x0:2901x2102)/cdn.vox-cdn.com/uploads/chorus_image/image/55904439/1_p1AJzhVp6pqpMEdo7vSzag.0.jpeg", song: song_1, user: user_tim, selected: false)
 ref_img_4 = RefImg.create(title: "Kanye_808", img_url: "https://uproxx.com/wp-content/uploads/2018/11/808-heartbreaks-grid-uproxx.jpg", song: song_1, user: user_tim, selected: false)
 ref_img_5 = RefImg.create(title: "Kanye_MBDTF", img_url: "https://media.gq.com/photos/564f92c8dc7b324869a6ec18/master/pass/GettyImages-104037857.jpg", song: song_1, user: user_tim, selected: false)
 ref_img_6 = RefImg.create(title: "Kanye_Yeezus", img_url: "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-13565-kanye-1800-1385144890.jpg", song: song_1, user: user_tim, selected: false)
 
-beat_1 = Beat.create(bpm: 145, key_sig: "A minor", selected: true, song: song_1, user: user_kanye)
-beat_2 = Beat.create(bpm: 100, key_sig: "B major", selected: false, song: song_1, user: user_tim)
-beat_3 = Beat.create(bpm: 80, key_sig: "D minor", selected: false, song: song_1, user: user_tim)
-beat_4 = Beat.create(bpm: 70, key_sig: "B# minor", selected: false, song: song_1, user: user_tim)
-beat_5 = Beat.create(bpm: 92, key_sig: "D flat minor", selected: false, song: song_1, user: user_tim)
-beat_6 = Beat.create(bpm: 83, key_sig: "D major", selected: false, song: song_1, user: user_tim)
 
-vocal_1 = Vocal.create(beat: beat_1, user: user_kanye, selected: false)
-vocal_2 = Vocal.create(beat: beat_1, user: user_tim, selected: false)
-vocal_3 = Vocal.create(beat: beat_1, user: user_kanye, selected: false)
-vocal_4 = Vocal.create(beat: beat_1, user: user_tim, selected: false)
-vocal_5 = Vocal.create(beat: beat_1, user: user_kanye, selected: false)
-vocal_6 = Vocal.create(beat: beat_1, user: user_tim, selected: false)
+
+# vocal_1 = Vocal.create(beat: beat_1, user: user_kanye, selected: false)
+# vocal_2 = Vocal.create(beat: beat_1, user: user_tim, selected: false)
+# vocal_3 = Vocal.create(beat: beat_1, user: user_kanye, selected: false)
+# vocal_4 = Vocal.create(beat: beat_1, user: user_tim, selected: false)
+# vocal_5 = Vocal.create(beat: beat_1, user: user_kanye, selected: false)
+# vocal_6 = Vocal.create(beat: beat_1, user: user_tim, selected: false)
 
 poll_1_1 = Poll.create(phase: 1, user: user_tim)
 poll_2_1 = Poll.create(phase: 1, user: user_tim)
@@ -89,15 +84,85 @@ comment_1 = Comment.create(user: user_tim, comment_thread: comment_thread_1, con
 comment_2 = Comment.create(user: user_tim, comment_thread: comment_thread_1, content: "I be nappin")
 
 
+
 ref_song_1 = RefSong.create(title: "Stronger", song_url: "https://www.youtube.com/watch?v=PsO6ZnUZI0g&ab_channel=KanyeWestVEVO", song: song_1, user: user_tim, selected: false)
 
 
 
 
 
-song_2 = Song.create(title: "Track 2", placement: 2, phase: 1, album: album_1, description: "The call to adventure. The protaganist it met with a cirumstance that requires him to make a decision. Will he take a leap off faith, or will he continue living the same life?")
+song_2 = Song.create(title: "Track 2", placement: 2, phase: 2, album: album_1, description: "The call to adventure. The protaganist it met with a cirumstance that requires him to make a decision. Will he take a leap off faith, or will he continue living the same life?")
+comment_thread_2 = CommentThread.create(song: song_2, title: "Phase 2 Song 2 thread", phase: 2)
+
+ref_img_1_2 = RefImg.create(title: "Kanye", img_url: "https://esdevlin.com/files/kanye-west/_largeImage/EDN_KANYE_GLOW_08A_170915_160256.jpg", song: song_2, user: user_tim, selected: true)
+ref_img_2_2 = RefImg.create(title: "Kanye_CD", img_url: "https://www.nme.com/wp-content/uploads/2019/02/Kanye.jpg", song: song_2, user: user_tim, selected: false)
+ref_img_3_2 = RefImg.create(title: "Kanye_LR", img_url: "https://cdn.vox-cdn.com/thumbor/EW6bJfGP2d0w3qPzZOZHI0evFuk=/98x0:2901x2102/1200x800/filters:focal(98x0:2901x2102)/cdn.vox-cdn.com/uploads/chorus_image/image/55904439/1_p1AJzhVp6pqpMEdo7vSzag.0.jpeg", song: song_2, user: user_tim, selected: false)
+ref_img_4_2 = RefImg.create(title: "Kanye_808", img_url: "https://uproxx.com/wp-content/uploads/2018/11/808-heartbreaks-grid-uproxx.jpg", song: song_2, user: user_tim, selected: false)
+ref_img_5_2 = RefImg.create(title: "Kanye_MBDTF", img_url: "https://media.gq.com/photos/564f92c8dc7b324869a6ec18/master/pass/GettyImages-104037857.jpg", song: song_2, user: user_tim, selected: false)
+ref_img_6_2 = RefImg.create(title: "Kanye_Yeezus", img_url: "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-13565-kanye-1800-1385144890.jpg", song: song_2, user: user_tim, selected: false)
+
+beat_1_2 = Beat.create(bpm: 145, key_sig: "A minor", selected: false, song: song_2, user: user_kanye)
+beat_2_2 = Beat.create(bpm: 100, key_sig: "B major", selected: false, song: song_2, user: user_tim)
+beat_3_2 = Beat.create(bpm: 80, key_sig: "D minor", selected: false, song: song_2, user: user_tim)
+beat_4_2 = Beat.create(bpm: 70, key_sig: "B# minor", selected: false, song: song_2, user: user_tim)
+beat_5_2 = Beat.create(bpm: 92, key_sig: "D flat minor", selected: false, song: song_2, user: user_tim)
+beat_6_2 = Beat.create(bpm: 83, key_sig: "D major", selected: false, song: song_2, user: user_tim)
+
 
 song_3 = Song.create(title: "Track 3", placement: 3, phase: 3, album: album_1, description: "Meeting the mentor. As the hero embarks on his journey he is not alone.")
+
+comment_thread_3 = CommentThread.create(song: song_3, title: "Phase 3 Song 3 thread", phase: 3)
+
+ref_img_1_3 = RefImg.create(title: "Kanye", img_url: "https://esdevlin.com/files/kanye-west/_largeImage/EDN_KANYE_GLOW_08A_170915_160256.jpg", song: song_3, user: user_tim, selected: false)
+ref_img_2_3 = RefImg.create(title: "Kanye_CD", img_url: "https://www.nme.com/wp-content/uploads/2019/02/Kanye.jpg", song: song_3, user: user_tim, selected: true)
+ref_img_3_3 = RefImg.create(title: "Kanye_LR", img_url: "https://cdn.vox-cdn.com/thumbor/EW6bJfGP2d0w3qPzZOZHI0evFuk=/98x0:2901x2102/1200x800/filters:focal(98x0:2901x2102)/cdn.vox-cdn.com/uploads/chorus_image/image/55904439/1_p1AJzhVp6pqpMEdo7vSzag.0.jpeg", song: song_3, user: user_tim, selected: false)
+ref_img_4_3 = RefImg.create(title: "Kanye_808", img_url: "https://uproxx.com/wp-content/uploads/2018/11/808-heartbreaks-grid-uproxx.jpg", song: song_3, user: user_tim, selected: false)
+ref_img_5_3 = RefImg.create(title: "Kanye_MBDTF", img_url: "https://media.gq.com/photos/564f92c8dc7b324869a6ec18/master/pass/GettyImages-104037857.jpg", song: song_3, user: user_tim, selected: false)
+ref_img_6_3 = RefImg.create(title: "Kanye_Yeezus", img_url: "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-13565-kanye-1800-1385144890.jpg", song: song_3, user: user_tim, selected: false)
+
+
+beat_1_3 = Beat.create(bpm: 145, key_sig: "A minor", selected: true, song: song_3, user: user_kanye)
+beat_2_3 = Beat.create(bpm: 100, key_sig: "B major", selected: false, song: song_3, user: user_tim)
+beat_3_3 = Beat.create(bpm: 80, key_sig: "D minor", selected: false, song: song_3, user: user_tim)
+beat_4_3 = Beat.create(bpm: 70, key_sig: "B# minor", selected: false, song: song_3, user: user_tim)
+beat_5_3 = Beat.create(bpm: 92, key_sig: "D flat minor", selected: false, song: song_3, user: user_tim)
+beat_6_3 = Beat.create(bpm: 83, key_sig: "D major", selected: false, song: song_3, user: user_tim)
+
+vocal_1_3 = Vocal.create(beat: beat_1_3, user: user_kanye, selected: false)
+vocal_2_3 = Vocal.create(beat: beat_1_3, user: user_tim, selected: false)
+vocal_3_3 = Vocal.create(beat: beat_1_3, user: user_kanye, selected: false)
+vocal_4_3 = Vocal.create(beat: beat_1_3, user: user_tim, selected: false)
+vocal_5_3 = Vocal.create(beat: beat_1_3, user: user_kanye, selected: false)
+vocal_6_3 = Vocal.create(beat: beat_1_3, user: user_tim, selected: false)
+
+
+
+
+song_4 = Song.create(title: "Track 4", placement: 4, phase: 4, album: album_1, description: "Crossing the Threshold. The hero enters the new world")
+
+ref_img_1_4 = RefImg.create(title: "Kanye", img_url: "https://esdevlin.com/files/kanye-west/_largeImage/EDN_KANYE_GLOW_08A_170915_160256.jpg", song: song_4, user: user_tim, selected: false)
+ref_img_2_4 = RefImg.create(title: "Kanye_CD", img_url: "https://www.nme.com/wp-content/uploads/2019/02/Kanye.jpg", song: song_3, user: user_tim, selected: false)
+ref_img_3_4 = RefImg.create(title: "Kanye_LR", img_url: "https://cdn.vox-cdn.com/thumbor/EW6bJfGP2d0w3qPzZOZHI0evFuk=/98x0:2901x2102/1200x800/filters:focal(98x0:2901x2102)/cdn.vox-cdn.com/uploads/chorus_image/image/55904439/1_p1AJzhVp6pqpMEdo7vSzag.0.jpeg", song: song_3, user: user_tim, selected: false)
+ref_img_4_4 = RefImg.create(title: "Kanye_808", img_url: "https://uproxx.com/wp-content/uploads/2018/11/808-heartbreaks-grid-uproxx.jpg", song: song_4, user: user_tim, selected: true)
+ref_img_5_4 = RefImg.create(title: "Kanye_MBDTF", img_url: "https://media.gq.com/photos/564f92c8dc7b324869a6ec18/master/pass/GettyImages-104037857.jpg", song: song_4, user: user_tim, selected: false)
+ref_img_6_4 = RefImg.create(title: "Kanye_Yeezus", img_url: "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-13565-kanye-1800-1385144890.jpg", song: song_4, user: user_tim, selected: false)
+
+
+beat_1_4 = Beat.create(bpm: 145, key_sig: "A minor", selected: true, song: song_4, user: user_kanye)
+beat_2_4 = Beat.create(bpm: 100, key_sig: "B major", selected: false, song: song_4, user: user_tim)
+beat_3_4 = Beat.create(bpm: 80, key_sig: "D minor", selected: false, song: song_4, user: user_tim)
+beat_4_4 = Beat.create(bpm: 70, key_sig: "B# minor", selected: false, song: song_4, user: user_tim)
+beat_5_4 = Beat.create(bpm: 92, key_sig: "D flat minor", selected: false, song: song_4, user: user_tim)
+beat_6_4 = Beat.create(bpm: 83, key_sig: "D major", selected: false, song: song_4, user: user_tim)
+
+vocal_1_4 = Vocal.create(beat: beat_1_4, user: user_kanye, selected: true)
+vocal_2_4 = Vocal.create(beat: beat_1_4, user: user_tim, selected: false)
+vocal_3_4 = Vocal.create(beat: beat_1_4, user: user_kanye, selected: false)
+vocal_4_4 = Vocal.create(beat: beat_1_4, user: user_tim, selected: false)
+vocal_5_4 = Vocal.create(beat: beat_1_4, user: user_kanye, selected: false)
+vocal_6_4 = Vocal.create(beat: beat_1_4, user: user_tim, selected: false)
+
+
 
 
 

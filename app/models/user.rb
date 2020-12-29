@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
     has_many :polls
 
+    has_many :comments
+
     has_many :beats
     has_many :masters
     has_many :mixes
