@@ -80,7 +80,7 @@ img_5_win_1 = Result.create(poll: poll_15_5, win: true, winnable: RefImg, winnab
 
 comment_thread_1 = CommentThread.create(song: song_1, title: "Phase 1 Song 1 thread", phase: 1) 
 
-#
+##
 
 comment_1 = Comment.create(user: user_tim, comment_thread: comment_thread_1, content: "I'm a comment, yay!")
 comment_2 = Comment.create(user: user_tim, comment_thread: comment_thread_1, content: "I be nappin")
