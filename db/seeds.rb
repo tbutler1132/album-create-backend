@@ -138,7 +138,7 @@ vocal_5_3 = Vocal.create(beat: beat_1_3, user: user_kanye, selected: false)
 vocal_6_3 = Vocal.create(beat: beat_1_3, user: user_tim, selected: false)
 
 
-
+##
 
 song_4 = Song.create(title: "Track 4", placement: 4, phase: 4, album: album_1, description: "Crossing the Threshold. The hero enters the new world")
 
