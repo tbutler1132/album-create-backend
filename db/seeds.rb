@@ -168,21 +168,162 @@ vocal_6_4 = Vocal.create(beat: beat_1_4, user: user_tim, selected: false)
 
 
 
-# beat_1.audio_data.attach(
-#     io: File.open('app/audio/rockstar.mp3'),
-#     filename: 'rockstar.mp3' 
-# )
+beat_1_2.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
 
-# beat_2.audio_data.attach(
-#     io: File.open('app/audio/rockstar.mp3'),
-#     filename: 'rockstar.mp3' 
-# )
+beat_2_2.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
 
-# beat_3.audio_data.attach(
-#     io: File.open('app/audio/rockstar.mp3'),
-#     filename: 'rockstar.mp3' 
-# )
+beat_3_2.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
 
+beat_4_2.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+beat_5_2.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+beat_6_2.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+
+beat_1_3.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+beat_2_3.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+beat_3_3.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+beat_4_3.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+beat_5_3.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+beat_6_3.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+
+beat_1_4.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+beat_2_4.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+beat_3_4.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+beat_4_4.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+beat_5_4.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+beat_6_4.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+
+
+
+vocal_1_4.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+vocal_2_4.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+vocal_3_4.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+vocal_4_4.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+vocal_5_4.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+vocal_6_4.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+
+
+vocal_1_3.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+vocal_2_3.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+vocal_3_3.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+vocal_4_3.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+vocal_5_3.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
+
+vocal_6_3.audio_data.attach(
+    io: File.open('app/audio/rockstar.mp3'),
+    filename: 'rockstar.mp3' 
+)
 # vocal_1.audio_data.attach(
 #     io: File.open('app/audio/rockstar.mp3'),
 #     filename: 'rockstar.mp3' 
